@@ -9,7 +9,7 @@ const open = ref(false);
   <header class="app-header">
     <div class="app-header-inner">
       <RouterLink to="/" class="flex items-center gap-3">
-        <img src="@/assets/logo.svg" alt="Mallas MyS" class="h-8 w-auto" />
+        <img src="@/assets/logo.jpeg" alt="Mallas MyS" class="h-8 w-auto" />
         <span class="font-semibold text-gray-800">Mallas MyS</span>
       </RouterLink>
 
