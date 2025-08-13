@@ -1,0 +1,24 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+}
+
+html, body, #app {
+  height: 100%;
+}
+
+/* Estilos reutilizables */
+.btn {
+  @apply inline-flex items-center justify-center rounded-2xl px-4 py-2 font-medium transition;
+}
+
+.btn-primary {
+  @apply bg-gradient-to-r from-brand-rose to-brand-violet text-white hover:opacity-90;
+}
+
+.card {
+  @apply bg-white rounded-2xl shadow-sm border border-pink-100/30;
+}

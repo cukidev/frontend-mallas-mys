@@ -1,0 +1,47 @@
+.catalog-page {
+  margin: 0 auto;
+  max-width: 72rem;
+  padding: 0 16px;
+  margin-top: 24px;
+  margin-bottom: 24px;
+}
+
+.catalog-title {
+  font-size: 24px;
+  font-weight: 700;
+  color: #1f2937;
+}
+
+.catalog-sub {
+  font-size: 14px;
+  color: #4b5563;
+}
+
+.catalog-grid {
+  margin-top: 24px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+}
+
+@media (min-width: 768px) {
+  .catalog-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .catalog-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.catalog-empty {
+  margin-top: 24px;
+  color: #4b5563;
+}
+
+.catalog-more {
+  text-align: center;
+  margin-top: 32px;
+}

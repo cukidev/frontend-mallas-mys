@@ -1,0 +1,39 @@
+<script setup lang="ts">
+
+import "@/styles/pages/Home.css";
+import Hero from "@/components/Hero.vue";
+import ProductCard from "@/components/ProductCard.vue";
+import products from "@/data/products.json";
+import { computed } from "vue";
+
+const featured = computed(() => products.filter(p => p.featured).slice(0, 3));
+const imagesMap = import.meta.glob("/src/assets/products/*", { eager: true, query: "?url", import: "default" }) as Record<string, string>;
+</script>
+
+<template>
+  <Hero />
+  <section class="home-section">
+    <h2 class="home-title">Categorías</h2>
+    <div class="home-categories">
+      <router-link to="/catalogo?category=basica" class="home-card bg-brand-pinkBg/60">
+        <h3 class="font-semibold text-gray-800">Básicas</h3>
+        <p class="text-sm text-gray-600 mt-1">Modelos sencillos, sin cristalería.</p>
+      </router-link>
+      <router-link to="/catalogo?category=intermedia" class="home-card bg-brand-lilacBg/60">
+        <h3 class="font-semibold text-gray-800">Intermedias</h3>
+        <p class="text-sm text-gray-600 mt-1">Más tonos y detalles, con cristalería.</p>
+      </router-link>
+      <router-link to="/catalogo?category=premium" class="home-card bg-white">
+        <h3 class="font-semibold text-gray-800">Premium</h3>
+        <p class="text-sm text-gray-600 mt-1">Personalizadas, técnicas avanzadas.</p>
+      </router-link>
+    </div>
+  </section>
+
+  <section class="home-section">
+    <h2 class="home-title">Destacados</h2>
+    <div class="home-grid">
+      <ProductCard v-for="p in featured" :key="p.id" :product="p" :imagesMap="imagesMap" />
+    </div>
+  </section>
+</template>

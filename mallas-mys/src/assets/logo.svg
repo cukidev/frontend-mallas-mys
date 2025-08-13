@@ -1,0 +1,10 @@
+<svg width="160" height="40" viewBox="0 0 160 40" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="g" x1="0" x2="1">
+      <stop offset="0" stop-color="#F9A8D4"></stop>
+      <stop offset="1" stop-color="#A78BFA"></stop>
+    </linearGradient>
+  </defs>
+  <rect rx="10" width="160" height="40" fill="url(#g)"></rect>
+  <text x="80" y="26" font-size="18" font-family="Inter, system-ui, sans-serif" fill="white" text-anchor="middle">Mallas MyS</text>
+</svg>

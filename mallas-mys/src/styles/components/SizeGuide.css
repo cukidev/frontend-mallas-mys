@@ -1,0 +1,48 @@
+.size-card {
+  background-color: white;
+  border-radius: 16px;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  border: 1px solid rgba(236, 72, 153, 0.3);
+  padding: 16px;
+}
+
+.size-title {
+  font-size: 18px;
+  font-weight: 600;
+  color: #1f2937;
+}
+
+.size-desc {
+  font-size: 14px;
+  color: #4b5563;
+  margin-top: 4px;
+}
+
+.size-table {
+  margin-top: 16px;
+  overflow: auto;
+}
+
+.size-table-el {
+  min-width: 100%;
+  font-size: 14px;
+}
+
+.size-head {
+  text-align: left;
+  color: #4b5563;
+}
+
+.size-row {
+  border-top: 1px solid rgba(236, 72, 153, 0.5);
+}
+
+.size-cell {
+  padding: 8px 16px 8px 0;
+}
+
+.size-note {
+  font-size: 12px;
+  color: #6b7280;
+  margin-top: 12px;
+}

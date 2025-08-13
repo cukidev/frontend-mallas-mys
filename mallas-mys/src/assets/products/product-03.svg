@@ -1,0 +1,7 @@
+<svg width="640" height="800" viewBox="0 0 640 800" xmlns="http://www.w3.org/2000/svg">
+  <defs><linearGradient id="g" x1="0" x2="1"><stop offset="0" stop-color="#FCE7F3"></stop><stop offset="1" stop-color="#A78BFA"></stop></linearGradient></defs>
+  <rect width="640" height="800" fill="url(#g)"></rect>
+  <circle cx="320" cy="260" r="140" fill="#A78BFA"></circle>
+  <rect x="280" y="380" width="80" height="280" rx="40" fill="#E879F9"></rect>
+  <text x="320" y="740" font-size="28" text-anchor="middle" fill="#6B21A8" font-family="Inter, system-ui, sans-serif">Premium</text>
+</svg>
