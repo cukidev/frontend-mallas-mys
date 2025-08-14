@@ -78,6 +78,7 @@ const handleCategoryClick = (category: string) => {
         </div>
 
         <RouterLink to="/tallas" class="app-nav-link">Guía de tallas</RouterLink>
+        <RouterLink to="/nosotras" class="app-nav-link">Nosotras</RouterLink>
         <RouterLink to="/contacto" class="app-nav-link">Contacto</RouterLink>
       </nav>
 
