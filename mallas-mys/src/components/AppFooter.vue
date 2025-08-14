@@ -1,5 +1,7 @@
 <script setup lang="ts">
 import '@/styles/components/AppFooter.css'
+import instagramIcon from '@/assets/logos/instagram.webp'
+import tiktokIcon from '@/assets/logos/tiktok.webp'
 </script>
 
 <template>
@@ -24,10 +26,26 @@ import '@/styles/components/AppFooter.css'
       </div>
       <div>
         <p class="footer-title">Redes</p>
-        <ul class="mt-2 space-y-1">
-          <li><a href="#" aria-label="Instagram">Instagram</a></li>
-          <li><a href="#" aria-label="TikTok">TikTok</a></li>
-        </ul>
+        <div class="social-links">
+          <a 
+            href="https://www.instagram.com/mys.mallas/" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            aria-label="Síguenos en Instagram"
+            class="social-link"
+          >
+            <img :src="instagramIcon" alt="Instagram" class="social-icon-img" />
+          </a>
+          <a 
+            href="https://www.tiktok.com/@mys.mallas" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            aria-label="Síguenos en TikTok"
+            class="social-link"
+          >
+            <img :src="tiktokIcon" alt="TikTok" class="social-icon-img" />
+          </a>
+        </div>
       </div>
     </div>
     <div class="footer-bottom">© 2025 Mallas MyS</div>
