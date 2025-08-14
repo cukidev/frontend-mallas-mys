@@ -1,5 +1,7 @@
 <script setup lang="ts">
 import '@/styles/components/FiltersPanel.css'
+import { computed } from 'vue'
+import productsData from '@/data/products.json'
 
 const props = defineProps<{
   modelValue: {
@@ -13,9 +15,62 @@ const props = defineProps<{
   }
 }>()
 const emit = defineEmits<{ 'update:modelValue': [typeof props.modelValue] }>()
+
 function update<K extends keyof typeof props.modelValue>(k: K, v: (typeof props.modelValue)[K]) {
   emit('update:modelValue', { ...props.modelValue, [k]: v })
 }
+
+const availableSizes = computed(() => {
+  let products = []
+  
+  // Obtener productos según la categoría seleccionada
+  if (props.modelValue.category === 'entrenamiento') {
+    products = productsData.entrenamiento
+  } else if (props.modelValue.category === 'competencia') {
+    products = productsData.competencia
+  } else if (props.modelValue.category === 'accesorios') {
+    products = productsData.accesorios
+  } else {
+    // Si no hay categoría seleccionada, combinar todos los productos
+    products = [
+      ...productsData.entrenamiento,
+      ...productsData.competencia,
+      ...productsData.accesorios
+    ]
+  }
+  
+  // Extraer todas las tallas únicas de los productos
+  const allSizes = new Set<string>()
+  products.forEach(product => {
+    if (product.sizes && Array.isArray(product.sizes)) {
+      product.sizes.forEach(size => allSizes.add(size))
+    }
+  })
+  
+  // Convertir a array y ordenar de manera inteligente
+  const sizesArray = Array.from(allSizes)
+  return sizesArray.sort((a, b) => {
+    // Números primero
+    const aIsNumber = !isNaN(Number(a))
+    const bIsNumber = !isNaN(Number(b))
+    
+    if (aIsNumber && bIsNumber) {
+      return Number(a) - Number(b)
+    }
+    if (aIsNumber && !bIsNumber) return -1
+    if (!aIsNumber && bIsNumber) return 1
+    
+    // Letras simples antes que rangos
+    const aIsRange = a.includes('-')
+    const bIsRange = b.includes('-')
+    
+    if (!aIsRange && bIsRange) return -1
+    if (aIsRange && !bIsRange) return 1
+    
+    // Orden alfabético para el resto
+    return a.localeCompare(b)
+  })
+})
 </script>
 
 <template>
@@ -43,8 +98,9 @@ function update<K extends keyof typeof props.modelValue>(k: K, v: (typeof props.
       @change="update('size', ($event.target as HTMLSelectElement).value)"
     >
       <option value="">Talla</option>
+      <!-- Usar tallas dinámicas de productos disponibles -->
       <option
-        v-for="t in ['4', '6', '8', '10', '12', '14', '16', 'S', 'M', 'L']"
+        v-for="t in availableSizes"
         :key="t"
         :value="t"
       >
