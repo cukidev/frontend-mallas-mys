@@ -33,9 +33,9 @@ function update<K extends keyof typeof props.modelValue>(k: K, v: (typeof props.
       @change="update('category', ($event.target as HTMLSelectElement).value)"
     >
       <option value="">Categoría</option>
-      <option value="basica">Entrenamiento</option>
-      <option value="intermedia">Competencia</option>
-      <option value="premium">Accesorios</option>
+      <option value="entrenamiento">Entrenamiento</option>
+      <option value="competencia">Competencia</option>
+      <option value="accesorios">Accesorios</option>
     </select>
     <select
       class="filters-select"
