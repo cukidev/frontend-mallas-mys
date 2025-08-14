@@ -10,6 +10,9 @@
   font-size: 24px;
   font-weight: 700;
   color: #1f2937;
+  border-bottom: 3px solid #d4af37;
+  padding-bottom: 2px;
+  display: inline-block;
 }
 
 .catalog-sub {
