@@ -27,18 +27,18 @@ import tiktokIcon from '@/assets/logos/tiktok.webp'
       <div>
         <p class="footer-title">Redes</p>
         <div class="social-links">
-          <a 
-            href="https://www.instagram.com/mys.mallas/" 
-            target="_blank" 
+          <a
+            href="https://www.instagram.com/mys.mallas/"
+            target="_blank"
             rel="noopener noreferrer"
             aria-label="Síguenos en Instagram"
             class="social-link"
           >
             <img :src="instagramIcon" alt="Instagram" class="social-icon-img" />
           </a>
-          <a 
-            href="https://www.tiktok.com/@mys.mallas" 
-            target="_blank" 
+          <a
+            href="https://www.tiktok.com/@mys.mallas"
+            target="_blank"
             rel="noopener noreferrer"
             aria-label="Síguenos en TikTok"
             class="social-link"
@@ -48,6 +48,16 @@ import tiktokIcon from '@/assets/logos/tiktok.webp'
         </div>
       </div>
     </div>
-    <div class="footer-bottom">© 2025 Mallas MyS</div>
+    <div class="footer-bottom">
+      © 2025 Mallas MyS | Página creada por:
+      <a
+        href="https://github.com/cukidev"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="developer-link"
+      >
+        Cukidev
+      </a>
+    </div>
   </footer>
 </template>
