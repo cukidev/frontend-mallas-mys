@@ -1,8 +1,6 @@
 <script setup lang="ts">
-
-import "@/styles/pages/Sizes.css";
-import SizeGuide from "@/components/SizeGuide.vue";
-
+import '@/styles/pages/Sizes.css'
+import SizeGuide from '@/components/SizeGuide.vue'
 </script>
 
 <template>

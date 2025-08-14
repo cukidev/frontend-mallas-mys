@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import "@/styles/components/AppFooter.css";
+import '@/styles/components/AppFooter.css'
 </script>
 
 <template>
@@ -8,7 +8,9 @@ import "@/styles/components/AppFooter.css";
       <div>
         <p class="footer-title">Mallas MyS</p>
         <p>Diseños para patinaje artístico, hechos a medida.</p>
-        <p class="mt-2 text-xs text-gray-500">No realizamos pagos en línea. Coordinamos por WhatsApp.</p>
+        <p class="mt-2 text-xs text-gray-500">
+          No realizamos pagos en línea. Coordinamos por WhatsApp.
+        </p>
       </div>
       <div>
         <p class="footer-title">Navegación</p>

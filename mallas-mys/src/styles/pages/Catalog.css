@@ -45,3 +45,22 @@
   text-align: center;
   margin-top: 32px;
 }
+
+/* Added load-more button styles */
+.load-more-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 16px;
+  padding: 8px 16px;
+  font-weight: 500;
+  transition: opacity 0.2s ease;
+  background: linear-gradient(to right, var(--brand-rose, #f43f5e), var(--brand-violet, #8b5cf6));
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.load-more-btn:hover {
+  opacity: 0.9;
+}

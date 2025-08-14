@@ -1,8 +1,8 @@
 <script setup lang="ts">
-import { ref } from "vue";
-import { RouterLink } from "vue-router";
-import "@/styles/components/AppHeader.css";
-const open = ref(false);
+import { ref } from 'vue'
+import { RouterLink } from 'vue-router'
+import '@/styles/components/AppHeader.css'
+const open = ref(false)
 </script>
 
 <template>
@@ -25,10 +25,10 @@ const open = ref(false);
 
     <div v-if="open" class="app-mobile">
       <div class="app-mobile-list">
-        <RouterLink @click="open=false" to="/">Inicio</RouterLink>
-        <RouterLink @click="open=false" to="/catalogo">Catálogo</RouterLink>
-        <RouterLink @click="open=false" to="/tallas">Guía de tallas</RouterLink>
-        <RouterLink @click="open=false" to="/contacto">Contacto</RouterLink>
+        <RouterLink @click="open = false" to="/">Inicio</RouterLink>
+        <RouterLink @click="open = false" to="/catalogo">Catálogo</RouterLink>
+        <RouterLink @click="open = false" to="/tallas">Guía de tallas</RouterLink>
+        <RouterLink @click="open = false" to="/contacto">Contacto</RouterLink>
       </div>
     </div>
   </header>

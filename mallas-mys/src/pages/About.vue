@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import "@/styles/pages/About.css";
+import '@/styles/pages/About.css'
 </script>
 
 <template>

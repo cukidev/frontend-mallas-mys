@@ -1,9 +1,8 @@
 <script setup lang="ts">
+import '@/styles/pages/Contact.css'
 
-import "@/styles/pages/Contact.css";
-
-const WA_NUMBER = "56986822895";
-const href = `https://wa.me/${WA_NUMBER}?text=${encodeURIComponent("Hola, quiero cotizar una malla 😊")}`;
+const WA_NUMBER = '56986822895'
+const href = `https://wa.me/${WA_NUMBER}?text=${encodeURIComponent('Hola, quiero cotizar una malla 😊')}`
 </script>
 
 <template>
@@ -18,10 +17,17 @@ const href = `https://wa.me/${WA_NUMBER}?text=${encodeURIComponent("Hola, quiero
         <input id="email" type="email" class="contact-input" placeholder="tu@correo.com" />
 
         <label class="contact-label mt-3" for="msg">Mensaje</label>
-        <textarea id="msg" class="contact-textarea" rows="4" placeholder="Cuéntanos tu idea"></textarea>
+        <textarea
+          id="msg"
+          class="contact-textarea"
+          rows="4"
+          placeholder="Cuéntanos tu idea"
+        ></textarea>
 
         <p class="contact-note">* Formulario de ejemplo, sin envío automático.</p>
-        <a :href="href" target="_blank" rel="noopener" class="contact-whats">Escríbenos por WhatsApp</a>
+        <a :href="href" target="_blank" rel="noopener" class="contact-whats"
+          >Escríbenos por WhatsApp</a
+        >
       </form>
 
       <div class="contact-info">

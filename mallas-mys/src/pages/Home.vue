@@ -16,16 +16,16 @@ const imagesMap = import.meta.glob("/src/assets/products/*", { eager: true, quer
     <h2 class="home-title">Categorías</h2>
     <div class="home-categories">
       <router-link to="/catalogo?category=basica" class="home-card bg-brand-pinkBg/60">
-        <h3 class="font-semibold text-gray-800">Básicas</h3>
-        <p class="text-sm text-gray-600 mt-1">Modelos sencillos, sin cristalería.</p>
+        <h3 class="font-semibold text-gray-800">Mallas de entrenamiento</h3>
+        <p class="text-sm text-gray-600 mt-1">Modelos sencillos.</p>
       </router-link>
       <router-link to="/catalogo?category=intermedia" class="home-card bg-brand-lilacBg/60">
-        <h3 class="font-semibold text-gray-800">Intermedias</h3>
+        <h3 class="font-semibold text-gray-800">Mallas de competencia</h3>
         <p class="text-sm text-gray-600 mt-1">Más tonos y detalles, con cristalería.</p>
       </router-link>
-      <router-link to="/catalogo?category=premium" class="home-card bg-white">
-        <h3 class="font-semibold text-gray-800">Premium</h3>
-        <p class="text-sm text-gray-600 mt-1">Personalizadas, técnicas avanzadas.</p>
+      <router-link to="/catalogo?category=accesorios" class="home-card bg-brand-yellowBg/60">
+        <h3 class="font-semibold text-gray-800">Accesorios</h3>
+        <p class="text-sm text-gray-600 mt-1">Complementos para el patinaje.</p>
       </router-link>
     </div>
   </section>
