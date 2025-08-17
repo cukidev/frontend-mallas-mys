@@ -10,8 +10,9 @@
 
 .product-card-imgwrap {
   position: relative;
-  aspect-ratio: 4/5;
+  aspect-ratio: 4 / 5;
   background-color: white;
+  overflow: hidden;
 }
 
 .product-card-img {
@@ -68,22 +69,21 @@
   border-radius: 16px;
   padding: 8px 16px;
   font-weight: 500;
-  transition: opacity 0.2s ease;
-  background: linear-gradient(to right, var(--brand-rose), var(--brand-violet));
-  color: white;
+  transition: background-color 0.2s ease;
+  border: 1px solid #fce7f3;
+  color: #ffffff;
+  background: linear-gradient(135deg, #ec4899 0%, #a855f7 100%);
+  text-decoration: none;
   margin-top: auto;
 }
 
 .product-card-cta:hover {
-  opacity: 0.9;
+  background: linear-gradient(135deg, #db2777 0%, #9333ea 100%);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
 }
 
 /* Estilos para el carrusel */
-.product-card-imgwrap {
-  position: relative;
-  overflow: hidden;
-}
-
 .carousel-btn {
   position: absolute;
   top: 50%;

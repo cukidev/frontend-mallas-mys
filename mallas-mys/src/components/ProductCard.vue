@@ -106,7 +106,7 @@ const fmt = (v: number) =>
       <h3 class="product-card-title">{{ product.name }}</h3>
       <p class="product-card-cat">{{ product.category }}</p>
       <p class="product-card-price">Desde {{ fmt(product.priceFrom) }}</p>
-      <router-link :to="`/producto/${product.slug}`" class="product-card-cta">Ver</router-link>
+      <router-link :to="`/producto/${product.slug}`" target="_blank" rel="noopener" class="product-card-cta">Ver</router-link>
     </div>
   </article>
 </template>
