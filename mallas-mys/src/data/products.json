@@ -11,7 +11,7 @@
       "priceFrom": 60000,
       "createdAt": "2025-07-01",
       "images": ["product-01.svg", "product-02.svg", "product-03.svg"],
-      "featured": true
+      "featured": false
     },
     {
       "id": 2,
@@ -65,7 +65,7 @@
       "priceFrom": 98000,
       "createdAt": "2025-07-05",
       "images": ["product-03.svg", "product-02.svg"],
-      "featured": true
+      "featured": false
     },
     {
       "id": 4,
@@ -132,7 +132,7 @@
       "priceFrom": 10990,
       "createdAt": "2025-07-15",
       "images": ["Corona-Cristales.jpg"],
-      "featured": false
+      "featured": true
     },
     {
       "id": 11,
@@ -158,7 +158,7 @@
       "priceFrom": 4990,
       "createdAt": "2025-07-28",
       "images": ["Scrunchie-AnPr.jpg", "Scrunchie-PlCa.jpeg", "Scrunchie-Ro.jpg","Scrunchie-RoVe.jpg"],
-      "featured": false
+      "featured": true
     }
   ]
 }
