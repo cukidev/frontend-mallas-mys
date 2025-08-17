@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import '@/styles/pages/Product.css'
-import { computed, ref } from 'vue'
+import { computed, ref, watch, onMounted } from 'vue'
 import { useRoute, useRouter } from 'vue-router'
 import productosData from '@/data/products.json'
 import { isFavorite, toggleFavorite } from '@/utils/favorites'
@@ -22,10 +22,12 @@ const imagesMap = import.meta.glob('/src/assets/products/*', {
   query: '?url',
   import: 'default',
 }) as Record<string, string>
+
 const activeImg = ref('')
 const chosenSize = ref<string>('')
 const chosenColor = ref<string>('')
 const fav = computed(() => (product.value ? isFavorite(product.value.id) : false))
+
 const fmt = (v: number) =>
   new Intl.NumberFormat('es-CL', {
     style: 'currency',
@@ -45,9 +47,17 @@ function waHref() {
   return `https://wa.me/${WA_NUMBER}?text=${t}`
 }
 
-if (!product.value) {
-  router.replace('/catalogo')
-}
+watch(product, (newProduct) => {
+  if (newProduct && newProduct.images.length > 0) {
+    activeImg.value = `/src/assets/products/${newProduct.images[0]}`
+  }
+}, { immediate: true })
+
+onMounted(() => {
+  if (!product.value) {
+    router.replace('/catalogo')
+  }
+})
 </script>
 
 <template>
@@ -62,6 +72,7 @@ if (!product.value) {
             v-for="img in product.images"
             :key="img"
             class="thumb"
+            :class="{ active: activeImg === `/src/assets/products/${img}` }"
             @click="activeImg = `/src/assets/products/${img}`"
           >
             <img
@@ -77,10 +88,7 @@ if (!product.value) {
         <h1 class="info-title">{{ product.name }}</h1>
         <p class="info-meta">Categoría: {{ product.category }}</p>
         <p class="info-price">Desde {{ fmt(product.priceFrom) }}</p>
-        <p class="info-text">
-          Diseño confeccionado para patinaje artístico. Personaliza color y talla según tu
-          necesidad.
-        </p>
+        <p class="info-text"> {{ product.description }} </p>
 
         <div class="selects">
           <div>
@@ -100,9 +108,10 @@ if (!product.value) {
         </div>
 
         <div class="actions">
+          <!--
           <button class="btn-secondary" @click="addFav">
             <span v-if="fav">♥</span><span v-else>♡</span>&nbsp; Favoritos
-          </button>
+          </button> -->
           <a :href="waHref()" target="_blank" rel="noopener" class="btn-primary"
             >Cotizar por WhatsApp</a
           >
