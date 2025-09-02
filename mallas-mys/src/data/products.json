@@ -114,11 +114,22 @@
       "name": "Cubre Patín",
       "description": "Protege tus patines con estilo.",
       "category": "accesorios",
-      "colors": ["rosa", "morado", "negro"],
-      "sizes": ["29-35", "36-42"],
+      "colors": ["Personalizado"],
+      "sizes": ["Estándar"],
       "priceFrom": 4000,
       "createdAt": "2025-07-10",
-      "images": ["product-03.svg", "product-04.svg"],
+      "images": [
+        "cubrepatin-azul.jpeg",
+        "cubrepatin-morado.jpeg",
+        "cubrepatin-negro.jpeg",
+        "cubrepatin-nude.jpeg",
+        "cubrepatin-rojo.jpeg",
+        "cubrepatin-rosado.jpeg",
+        "cubrepatin-tropical.jpeg",
+        "cubrepatin-vino.jpeg",
+        "subrepatin-camuflaje.jpeg",
+        "cubrepatin-camuflaje-azul.jpeg"
+      ],
       "featured": false
     },
     {
@@ -157,7 +168,12 @@
       "sizes": ["Estándar"],
       "priceFrom": 4990,
       "createdAt": "2025-07-28",
-      "images": ["Scrunchie-AnPr.jpg", "Scrunchie-PlCa.jpeg", "Scrunchie-Ro.jpg","Scrunchie-RoVe.jpg"],
+      "images": [
+        "Scrunchie-AnPr.jpg",
+        "Scrunchie-PlCa.jpeg",
+        "Scrunchie-Ro.jpg",
+        "Scrunchie-RoVe.jpg"
+      ],
       "featured": true
     }
   ]
