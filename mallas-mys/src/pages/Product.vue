@@ -177,14 +177,16 @@ onMounted(() => {
           <p class="info-price">{{ fmt(product.priceFrom) }} c/u</p>
 
           <!-- Cubrepatín-->
-          <div v-if="product.id === 5" class="offer-badge">
-            <span class="offer-text">🔥 Oferta especial: 2x{{ fmt(5000) }}</span>
-            <span class="savings">¡Ahorra {{ fmt(1000) }}!</span>
+          <div v-if="product.id === 5">
+            <p class="info-meta"><strong>Colores según disponibilidad</strong></p>
+            <div v-if="product.id === 5" class="offer-badge">
+              <span class="offer-text">🔥 Oferta especial: 2x{{ fmt(5000) }}</span>
+              <span class="savings">¡Ahorra {{ fmt(1000) }}!</span>
+            </div>
           </div>
         </div>
 
         <p class="info-text">{{ product.description }}</p>
-        <p class="info-meta"><strong>Colores según disponibilidad</strong></p>
 
         <div class="selects">
           <div>
