@@ -36,26 +36,27 @@
 .gallery-thumbs-container {
   margin-top: 12px;
   position: relative;
-  padding: 0 50px;
+  padding: 0 50px; /* Espacio para las flechas en desktop */
 }
 
 /* Responsive: menos padding en móvil */
 @media (max-width: 640px) {
   .gallery-thumbs-container {
-    padding: 0 40px;
+    padding: 0 40px; /* Menos padding en móvil */
   }
 }
 
 .gallery-thumbs-viewport {
-  width: 280px;
+  width: 280px; /* 4 thumbs × 64px + 3 gaps × 8px = 280px */
   margin: 0 auto;
   overflow: hidden;
   position: relative;
 }
 
+/* Responsive: viewport más pequeño en móvil */
 @media (max-width: 640px) {
   .gallery-thumbs-viewport {
-    width: 208px;
+    width: 208px; /* 3 thumbs × 64px + 2 gaps × 8px = 208px */
   }
 }
 
@@ -67,11 +68,11 @@
 }
 
 .gallery-thumbs::-webkit-scrollbar {
-  display: none;
+  display: none; /* Chrome, Safari */
 }
 
 .thumb {
-  flex-shrink: 0;
+  flex-shrink: 0; /* Importante: evita que se compriman */
   width: 64px;
   height: 64px;
   border-radius: 8px;
@@ -121,13 +122,14 @@
 }
 
 .nav-arrow.left {
-  left: 10px;
+  left: 10px; /* Dentro del padding */
 }
 
 .nav-arrow.right {
-  right: 10px;
+  right: 10px; /* Dentro del padding */
 }
 
+/* Responsive: flechas más pequeñas en móvil */
 @media (max-width: 640px) {
   .nav-arrow {
     width: 28px;
@@ -179,6 +181,47 @@
   color: #a21caf;
   font-size: 20px;
   font-weight: 600;
+}
+
+/* Nuevo: Estilos para ofertas */
+.pricing {
+  margin-top: 16px;
+}
+
+.offer-badge {
+  background: linear-gradient(135deg, #f59e0b, #f97316);
+  color: white;
+  padding: 8px 12px;
+  border-radius: 12px;
+  margin-top: 8px;
+  display: inline-block;
+  box-shadow: 0 2px 8px rgba(245, 158, 11, 0.3);
+  animation: pulse-glow 2s infinite;
+}
+
+.offer-text {
+  font-weight: 600;
+  font-size: 16px;
+  display: block;
+}
+
+.savings {
+  font-size: 12px;
+  opacity: 0.9;
+  display: block;
+  margin-top: 2px;
+}
+
+@keyframes pulse-glow {
+  0%,
+  100% {
+    box-shadow: 0 2px 8px rgba(245, 158, 11, 0.3);
+    transform: scale(1);
+  }
+  50% {
+    box-shadow: 0 4px 16px rgba(245, 158, 11, 0.5);
+    transform: scale(1.02);
+  }
 }
 
 .info-text {

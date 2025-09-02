@@ -171,7 +171,16 @@ onMounted(() => {
       <div>
         <h1 class="info-title">{{ product.name }}</h1>
         <p class="info-meta">Categoría: {{ product.category }}</p>
-        <p class="info-price">Desde {{ fmt(product.priceFrom) }}</p>
+
+        <!-- Precios con oferta especial -->
+        <div class="pricing">
+          <p class="info-price">{{ fmt(product.priceFrom) }} c/u</p>
+          <div v-if="product.id === 5" class="offer-badge">
+            <span class="offer-text">🔥 Oferta especial: 2x{{ fmt(5000) }}</span>
+            <span class="savings">¡Ahorra {{ fmt(1000) }}!</span>
+          </div>
+        </div>
+
         <p class="info-text">{{ product.description }}</p>
 
         <div class="selects">
