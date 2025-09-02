@@ -24,7 +24,7 @@
       "priceFrom": 60000,
       "createdAt": "2025-07-03",
       "images": ["product-02.svg", "product-01.svg"],
-      "featured": true
+      "featured": false
     },
     {
       "id": 6,
@@ -130,7 +130,7 @@
         "subrepatin-camuflaje.jpeg",
         "cubrepatin-camuflaje-azul.jpeg"
       ],
-      "featured": false
+      "featured": true
     },
     {
       "id": 7,
